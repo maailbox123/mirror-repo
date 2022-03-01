@@ -69,6 +69,7 @@ testacc-down: ## Teardown a GitLab instance.
 	docker-compose down
 
 testacc: ## Run acceptance tests against a GitLab instance.
+	echo "Hello weorkasdasdascsd"
 	TF_ACC=1 GITLAB_TOKEN=$(GITLAB_TOKEN) GITLAB_BASE_URL=$(GITLAB_BASE_URL) go test -v $(PROVIDER_SRC_DIR) $(TESTARGS) -timeout 40m
 
 # TOOLS
